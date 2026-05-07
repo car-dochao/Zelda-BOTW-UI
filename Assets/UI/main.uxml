@@ -1,0 +1,114 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/styles.uss?fileID=7433441132597879392&amp;guid=72e8c6f3c5bfa9b49a2ec45d5f108fe5&amp;type=3#styles"/>
+    <ui:VisualElement name="Background" class="background"/>
+    <ui:VisualElement name="ScreenTint" class="screen-tint"/>
+    <ui:VisualElement name="Body" class="body">
+        <ui:VisualElement name="Top-Bar" class="bar top-bar">
+            <Hearts name="Hearts" class="hearts-container" current-lifes="10" max-lifes="12" icon-path="Images/icons/heart"/>
+            <ui:VisualElement name="TopCenter" class="top-center">
+                <ui:VisualElement name="TabLeft" class="top-tab">
+                    <ui:Label name="LeftKey" text="L" class="top-key ui-font-bold"/>
+                    <ui:Label name="LeftText" text="Adventure Log" class="top-tab-text ui-font-regular"/>
+                </ui:VisualElement>
+                <ui:VisualElement name="TitleBlock" class="title-block">
+                    <ui:Label text="Inventory" name="Title" class="title ui-font-bold"/>
+                    <ui:Label text="..." class="title-dots ui-font-bold"/>
+                </ui:VisualElement>
+                <ui:VisualElement name="TabRight" class="top-tab">
+                    <ui:Label name="RightKey" text="R" class="top-key ui-font-bold"/>
+                    <ui:Label name="RightText" text="System" class="top-tab-text ui-font-regular"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <Rupees name="Rupees" class="rupees-container" value="7603"/>
+        </ui:VisualElement>
+
+        <ui:VisualElement name="Container" class="container">
+            <ui:VisualElement name="Log" class="page log-page" style="display: none;">
+                <ui:VisualElement name="QuestListPanel" class="quest-list-panel">
+                    <ui:Label text="Shrine Quests" class="quest-section-title ui-font-regular"/>
+                    <ui:VisualElement name="QuestList" class="quest-list"/>
+                </ui:VisualElement>
+                <ui:VisualElement name="QuestDetail" class="quest-detail">
+                    <ui:VisualElement class="quest-detail-header">
+                        <ui:Label name="QuestDetailTitle" text="The Spring of Power" class="quest-detail-title ui-font-bold"/>
+                        <ui:Label name="QuestDetailSubtitle" text="East Akkala Stable" class="quest-detail-subtitle ui-font-bold"/>
+                    </ui:VisualElement>
+                    <ui:Label name="QuestDetailBody" text="" class="quest-detail-body ui-font-regular"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+
+            <ui:VisualElement name="Inventory" class="page inventory-page">
+                <ui:VisualElement name="InventoryPanel" class="inventory-panel">
+                    <ui:VisualElement name="InventoryTabs" class="inventory-tabs">
+                        <ui:VisualElement class="subtabs-row">
+                            <ui:Label name="TabWeapons" text="Weapons" class="subtab ui-font-bold"/>
+                            <ui:Label name="TabShields" text="Shields" class="subtab ui-font-bold"/>
+                            <ui:Label name="TabArmors" text="Armor" class="subtab subtab-selected ui-font-bold"/>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="inventory-grid-wrap">
+                        <ui:VisualElement name="ArrowLeft" class="inventory-arrow inventory-arrow-left"/>
+                        <ui:VisualElement name="Grid" class="inventory-grid"/>
+                        <ui:VisualElement name="ArrowRight" class="inventory-arrow inventory-arrow-right"/>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+
+                <ui:VisualElement name="Character" class="character-container">
+                    <ui:VisualElement name="CharacterEffects" class="character-effects">
+                        <ui:VisualElement class="stamina-meter"/>
+                        <ui:Label text="Fr" class="effect-chip"/>
+                        <ui:Label text="Sw" class="effect-chip"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="CharacterImage" class="character-image"/>
+                    <ui:VisualElement name="EquippedColumn" class="equipped-column">
+                        <ui:VisualElement name="EquipHead" class="equip-slot"/>
+                        <ui:VisualElement name="EquipBody" class="equip-slot"/>
+                        <ui:VisualElement name="EquipLegs" class="equip-slot"/>
+                        <ui:VisualElement name="EquipShield" class="equip-slot"/>
+                        <ui:VisualElement name="EquipWeapon" class="equip-slot"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="ItemInfo" class="item-info-panel">
+                        <ui:Label name="ItemStars" text="★★" class="item-stars ui-font-bold"/>
+                        <ui:Label name="ItemName" text="Zora Helm" class="item-name ui-font-bold"/>
+                        <ui:Label name="ItemDescription" text="Zora headgear made from dragon scales.&#10;Increases swimming speed and allows spin attacks under water." class="item-description ui-font-regular"/>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+
+            <ui:VisualElement name="Settings" class="page settings-page" style="display: none;">
+                <ui:VisualElement name="SettingsMenu" class="settings-menu">
+                    <ui:Button name="SaveButton" text="Guardar" class="settings-button ui-font-bold"/>
+                    <ui:Button name="LifeButton" text="Quitar vida" class="settings-button ui-font-bold"/>
+                    <ui:Button name="RupeeButton" text="+10 rupias" class="settings-button ui-font-bold"/>
+                    <ui:Button text="Options" class="settings-button ui-font-bold"/>
+                    <ui:Button text="Return to Title Screen" class="settings-button ui-font-bold"/>
+                </ui:VisualElement>
+                <ui:VisualElement name="SettingsContent" class="settings-content">
+                    <ui:Label text="Basic Controls" class="settings-title ui-font-bold"/>
+                    <ui:VisualElement class="settings-box">
+                        <ui:Label text="Move    L" class="settings-line ui-font-regular"/>
+                        <ui:Label text="Action  A" class="settings-line ui-font-regular"/>
+                        <ui:Label text="Put Away  B" class="settings-line ui-font-regular"/>
+                        <ui:Label text="Camera Controls  R" class="settings-line ui-font-regular"/>
+                        <ui:Label text="Los botones de la izquierda modifican los datos guardables de Link." class="settings-line ui-font-regular"/>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <ui:VisualElement name="Bottom-Bar" class="bar bottom-bar">
+            <ui:Label text="Back  B" class="bottom-control ui-font-regular"/>
+            <ui:Label text="Select  A" class="bottom-control ui-font-regular"/>
+            <ui:Label text="Rotate  R" class="bottom-control ui-font-regular"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+
+    <ui:VisualElement name="PopupLayer" class="popup-layer" style="display: none;">
+        <ui:VisualElement name="Popup" class="popup">
+            <ui:Label name="PopupTitle" text="Zora Helm" class="popup-title ui-font-bold"/>
+            <ui:VisualElement name="PopupIcon" class="popup-icon"/>
+            <ui:Button name="PopupAction" text="Equipar" class="popup-button ui-font-bold"/>
+            <ui:Button name="PopupCancel" text="Cancelar" class="popup-button ui-font-bold"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

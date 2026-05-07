@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <ui:VisualElement class="item-slot">
+        <ui:VisualElement name="Icon" class="item-icon"/>
+        <ui:Label name="EquippedMark" text="E" class="equipped-mark ui-font-bold"/>
+        <ui:Label name="Amount" text="1" class="item-amount ui-font-bold"/>
+    </ui:VisualElement>
+</ui:UXML>

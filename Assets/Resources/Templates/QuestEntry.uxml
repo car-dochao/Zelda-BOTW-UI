@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <ui:VisualElement class="quest-entry">
+        <ui:Label text="◆" class="quest-icon ui-font-bold"/>
+        <ui:VisualElement class="quest-entry-text">
+            <ui:Label name="Title" text="Quest Title" class="quest-title ui-font-bold"/>
+            <ui:Label name="Subtitle" text="Quest Location" class="quest-subtitle ui-font-bold"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
