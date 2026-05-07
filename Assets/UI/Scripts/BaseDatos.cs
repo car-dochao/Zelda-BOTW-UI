@@ -16,6 +16,12 @@ public class BaseDatos
         }
         else individuo = new Individuo("Link", 10, 7603);
 
+        if (individuo.casco == "Zora Helm") individuo.casco = "Capucha Zora";
+        if (individuo.peto == "Zora Armor") individuo.peto = "Armadura Zora";
+        if (individuo.pantalon == "Zora Greaves") individuo.pantalon = "Grebas Zora";
+        if (individuo.escudo == "Ancient Shield") individuo.escudo = "Escudo ancestral";
+        if (individuo.arma == "Master Sword") individuo.arma = "Espada Maestra";
+
         return individuo;
     }
 

@@ -17,10 +17,10 @@ public class Individuo
         this.nombre = nombre;
         this.vidas = vidas;
         this.rupias = rupias;
-        casco = "Zora Helm";
-        peto = "Zora Armor";
-        pantalon = "Zora Greaves";
-        escudo = "Ancient Shield";
-        arma = "Master Sword";
+        casco = "Capucha Zora";
+        peto = "Armadura Zora";
+        pantalon = "Grebas Zora";
+        escudo = "Escudo ancestral";
+        arma = "Espada Maestra";
     }
 }
